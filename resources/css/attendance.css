@@ -1,0 +1,151 @@
+/* Attendance Page Styles - Light & Dark Theme */
+@import url('theme.css');
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Main content container */
+.students {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Form styling */
+#exportForm {
+    background-color: var(--card-background);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+#exportForm h1 {
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Date input styling */
+#date {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Side by side inputs */
+.side-by-side {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.side-by-side select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Student table styling */
+#studentTable {
+    margin-bottom: 25px;
+    overflow-x: auto;
+}
+
+#studentTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: var(--shadow);
+}
+
+#studentTable th {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+#studentTable td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    background-color: var(--background-color);
+}
+
+#studentTable tr:nth-child(even) td {
+    background-color: var(--secondary-color);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+/* Button styling */
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Dark mode specific adjustments for form elements */
+body.dark-mode #date,
+body.dark-mode .side-by-side select {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+body.dark-mode #studentTable td {
+    border-color: var(--border-color);
+}
+
+/* Error message styling */
+#studentTable p {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .side-by-side {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}

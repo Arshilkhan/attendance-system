@@ -1,0 +1,162 @@
+/* Reset the problematic positioning */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+footer, .footer-container {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
+}
+
+/* You can target specific sections */
+.footer-links-section {
+    /* Custom styles for links section if needed */
+}
+
+.footer-contact-section {
+    /* Custom styles for contact section if needed */
+}
+
+.footer-social-section {
+    /* Custom styles for social section if needed */
+}
+
+/* Headings */
+.footer-heading {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Links styling */
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Footer email and phone links can be styled specifically */
+.footer-email-link,
+.footer-phone-link {
+    /* Custom styles if needed */
+}
+
+/* Quick links list */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list-item {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-list-item:before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #ccc;
+}
+
+/* Contact section */
+.footer-contact-item {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.footer-contact-label {
+    font-weight: bold;
+}
+
+.footer-address {
+    /* Custom styles for address if needed */
+}
+
+/* Social links container */
+.footer-social-links {
+    margin-top: 10px;
+}
+
+/* Social icons */
+.footer-social-link {
+    display: inline-block;
+    font-size: 20px;
+    color: #ccc;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    color: #fff;
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Individual social links */
+.footer-facebook-link,
+.footer-twitter-link,
+.footer-instagram-link {
+    /* Custom styles for specific social platforms if needed */
+}
+
+.footer-social-icon {
+    margin: 0 5px;
+}
+
+.footer-social-divider {
+    color: #555;
+    margin: 0 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        padding-bottom: 300px;
+        /* Increase padding for smaller screens */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+}
+

@@ -1,0 +1,119 @@
+@import url('theme.css');
+
+/* About Page Styles - Light & Dark Theme */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Team Member Card */
+.team-member {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--card-background);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Image */
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Content */
+.profile h3 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin: 0 0 5px 0;
+}
+
+.profile .title {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.profile .about {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Social Icons */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--social-bg);
+    color: var(--social-text);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.socials i {
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .profile {
+        padding: 20px;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile h3 {
+        font-size: 1.5rem;
+    }
+}
