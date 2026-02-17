@@ -6,27 +6,19 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    protected $table = 'users';   // your existing table
+    protected $table = 'users';
 
-    protected $primaryKey = 'id';
-
-    public $timestamps = false;   // you don't have updated_at
+    public $timestamps = false;
 
     protected $fillable = [
         'username',
         'password',
         'first_name',
         'last_name',
-        'subject_code'
+        'subject'
     ];
 
     protected $hidden = [
         'password',
     ];
-
-    public function getAuthIdentifierName()
-    {
-        return 'username';
-    }
-
 }
