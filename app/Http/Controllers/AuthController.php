@@ -19,7 +19,12 @@ class AuthController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (
+            Auth::attempt([
+                'username' => $request->username,
+                'password' => $request->password
+            ])
+        ) {
             $request->session()->regenerate();
             return redirect('/dashboard');
         }
