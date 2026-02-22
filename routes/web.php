@@ -14,5 +14,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/students', [StudentController::class, 'index'])->name('students');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/api/user', [UserApiController::class, 'current']);
-
 });

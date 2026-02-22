@@ -13,8 +13,6 @@
                 from the web and mobile app, allows policy customization according to changing work
                 preferences, and manages all your attendance information accurately.
             </p>
-
-            {{-- OLD: account.php --}}
             <button class="btn" onclick="window.location.href='{{ url('/account') }}'">
                 Create Account
             </button>
@@ -36,8 +34,6 @@
                 Allow your teams to access work from any authorized location or device with IP and
                 location-based attendance marking, making the entire process safe and secure.
             </p>
-
-            {{-- OLD: attendance.php --}}
             <button class="btn" onclick="window.location.href='{{ url('/attendance') }}'">
                 Get Started →
             </button>
@@ -69,9 +65,4 @@
         </p>
     </div>
 </div>
-
-{{-- Scripts --}}
-<script src="{{ asset('js/navbar.js') }}"></script>
-<script src="{{ asset('js/footer.js') }}"></script>
-
 @endsection

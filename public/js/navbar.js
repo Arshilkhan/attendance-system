@@ -10,9 +10,7 @@ class Navbar extends HTMLElement {
           'X-Requested-With': 'XMLHttpRequest'
         }
       });
-
       const data = await response.json();
-
       let fullName = '';
       if (data && data.first_name && data.last_name) {
         fullName = `${data.first_name} ${data.last_name}`;
@@ -72,12 +70,12 @@ class Navbar extends HTMLElement {
       try {
         await fetch('/logout', {
           method: 'POST',
+          credentials: 'same-origin',
           headers: {
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
             'X-Requested-With': 'XMLHttpRequest'
           }
         });
-
         window.location.href = '/login';
       } catch (err) {
         console.error('Logout failed:', err);
